@@ -1,0 +1,20 @@
+#!/usr/bin/sh
+
+_files="$@"
+
+# If there are no files, there's nothing for us to do
+[ -z $_files ] && exit 0
+
+for f in $_files; do
+    # Only process files that match the following extensions
+    if [ "${f##*.}" = "tf" ] || [ "${f##*.}" = "tfvars" ]; then
+        if [ ! -f ${f} ]; then
+            echo "Cannot locate file ${f}!" >&2
+            exit 1
+        fi
+        cat ${f} | terraform fmt - | tee ${f} > /dev/null
+        git add ${f}
+    fi
+done
+
+exit 0

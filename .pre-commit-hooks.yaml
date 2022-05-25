@@ -1,0 +1,7 @@
+- id: terraform-fmt
+  name: terraform-fmt
+  description: Apply consistent Terraform format
+  entry: terraform-fmt
+  language: script
+  files: '^.*\.tf$'
+#  files: '(^|/)setup\.cfg$'
