@@ -4,7 +4,7 @@ An example bash pre-commit hook to use `terraform fmt` on commit.
 
 To get started using the pre-commit hook, first install https://pre-commit.com
 
-Then, create a pre-commit config file in your repository:
+Then, create a pre-commit config file called `.pre-commit-config.yaml` in your repository:
 
 ```yaml
 repos:
