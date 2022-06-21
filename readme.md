@@ -2,6 +2,8 @@
 
 An example bash pre-commit hook to use `terraform fmt` on commit.
 
+Latest Versin: `v1.1.0`
+
 To get started using the pre-commit hook, first install https://pre-commit.com
 
 ```shell
@@ -13,7 +15,7 @@ Then, create a pre-commit config file called `.pre-commit-config.yaml` in your r
 ```yaml
 repos:
   - repo: https://github.com/BrianSidebotham/pre-commit-terraform-fmt.git
-    rev: v1.0.0
+    rev: v1.1.0
     hooks:
       - id: terraform-fmt
 ```
