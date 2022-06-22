@@ -3,7 +3,7 @@
 _files="$@"
 
 # If there are no files, there's nothing for us to do
-[ -z $_files ] && exit 0
+[ -z "$_files" ] && exit 0
 
 for f in $_files; do
     # Only process files that match the following extensions
